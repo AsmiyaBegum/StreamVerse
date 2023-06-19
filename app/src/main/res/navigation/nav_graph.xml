@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/StreamVerseHomeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/StreamVerseHomeFragment"
         android:name="com.ab.streamverse.StreamVerseHomeFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:label="@string/stream_verse_home_fragment_label"
+        tools:layout="@layout/stream_verse_home_fragment">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_HomeFrament_to_PreviewFragment"
+            app:destination="@id/PreviewFragment" />
 
         <argument
             android:name="movieKey"
@@ -22,13 +22,26 @@
 
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/PreviewFragment"
         android:name="com.ab.streamverse.streamversepreview.PreviewFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:label="@string/preview_fragment_label"
+        tools:layout="@layout/preview_fragment">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_PreviewFragment_to_HomeFragment"
+            app:destination="@id/StreamVerseHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OtherMenuFragment"
+        android:name="com.ab.streamverse.othermenu.OtherMenuFragment"
+        android:label="@string/other_menu_fragment"
+        tools:layout="@layout/other_menu_layout">
+
+        <action
+            android:id="@+id/action_OtherMenuFragment_to_StreamVerseHomeFragment"
+            app:destination="@id/StreamVerseHomeFragment" />
+
+
     </fragment>
 </navigation>

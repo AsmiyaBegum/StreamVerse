@@ -13,6 +13,7 @@ import com.ab.streamverse.model.VideoStreamCategory
 import com.ab.streamverse.model.StreamDetails
 import com.ab.streamverse.streamVerseHome.StreamDetailsAdapter
 import com.ab.streamverse.streamVerseHome.StreamDetailsViewHolder
+import com.ab.streamverse.util.Utils.showVisibility
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestBuilder
 import com.bumptech.glide.request.RequestOptions
@@ -30,15 +31,14 @@ object AdapterUtils {
                 holder: GenericAdapter.GenericViewHolder<VideoStreamCategory, StreamCategoryListLayoutBinding, List<Unit>>,
                 additionalData: List<Unit>?
             ) {
-                Log.d("asmi",data.streamName)
                 binding.streamCategoryName.text = data.streamName
-                updateStreamList(data.streamList,binding)
+                updateStreamList(data.streamList,binding,data.isTopTen)
             }
 
 
-            private fun updateStreamList(streamList : List<StreamDetails>,binding: StreamCategoryListLayoutBinding){
+            private fun updateStreamList(streamList : List<StreamDetails>,binding: StreamCategoryListLayoutBinding,isTop10 : Boolean){
                 binding.streamList.layoutManager = LinearLayoutManager(binding.root.context,RecyclerView.HORIZONTAL,false)
-                binding.streamList.adapter = StreamDetailsAdapter(streamList,delegate)
+                binding.streamList.adapter = StreamDetailsAdapter(streamList,delegate,isTop10)
             }
 
             override fun onClicked(data: VideoStreamCategory, binding: StreamCategoryListLayoutBinding) {
@@ -51,45 +51,18 @@ object AdapterUtils {
     }
 
 
-    fun setUpCastTypeListAdapter(streamCategoryList : List<Casting>) : GenericAdapter<Casting, CastListRowBinding,List<Unit>>{
-
-        val adapter = GenericAdapter(R.layout.cast_list_row,object : GenericAdapterInteraction<Casting, CastListRowBinding,List<Unit>>(){
-
-            override fun bindingViewHolder(
-                binding: CastListRowBinding,
-                data: Casting,
-                holder: GenericAdapter.GenericViewHolder<Casting, CastListRowBinding, List<Unit>>,
-                additionalData: List<Unit>?
-            ) {
-                binding.castType.text = binding.root.resources.getString(R.string.cast_type,data.actors)
-            }
-
-
-            override fun onClicked(data: Casting, binding: CastListRowBinding) {
-                //override fun not implemented
-            }
-        })
-        adapter.addItems(streamCategoryList)
-
-        return adapter
-    }
-
-
-    fun setUpRecentTrendsAdapter(streamDetails : List<StreamDetails>) :  GenericAdapter<StreamDetails, RecentReleaseImageBinding,List<Unit>>{
+    fun setUpRecentTrendsAdapter(streamDetails : List<StreamDetails>,delegate : StreamDetailsViewHolder.StreamDetailsDelegate) :  GenericAdapter<StreamDetails, RecentReleaseImageBinding,List<Unit>>{
 
         val adapter = GenericAdapter(R.layout.recent_release_image,object : GenericAdapterInteraction<StreamDetails, RecentReleaseImageBinding,List<Unit>>(){
 
-            override fun bindingViewHolder(
-                binding: RecentReleaseImageBinding,
-                data: StreamDetails,
-                holder: GenericAdapter.GenericViewHolder<StreamDetails, RecentReleaseImageBinding, List<Unit>>,
-                additionalData: List<Unit>?
-            ) {
+            override fun bindingViewHolder(binding: RecentReleaseImageBinding, data: StreamDetails, holder: GenericAdapter.GenericViewHolder<StreamDetails, RecentReleaseImageBinding, List<Unit>>, additionalData: List<Unit>?) {
+                binding.imageFreeTag.showVisibility(data.free == Constants.YES)
                 handleViewImg(binding,data.thumbnail)
             }
 
 
             override fun onClicked(data: StreamDetails, binding: RecentReleaseImageBinding) {
+                delegate.selectedStreamVideo(data)
                 //override fun not implemented
             }
 

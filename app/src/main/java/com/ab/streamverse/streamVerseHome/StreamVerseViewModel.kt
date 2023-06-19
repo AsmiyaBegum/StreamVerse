@@ -91,11 +91,10 @@ class StreamVerseViewModel : ViewModel() {
                     }
                     resultUser.onFailure {
                         _errorDetail.value = Unit
-                        Log.d("asmi-error",it.toString())
                     }
                 }
             } catch (e: Exception) {
-                Log.d("asmi-error",e.toString())
+                //catch exception
             }
         }
     }
@@ -111,11 +110,10 @@ class StreamVerseViewModel : ViewModel() {
                     }
                     resultUser.onFailure {
                         _errorDetail.value = Unit
-                        Log.d("asmi-error",it.toString())
                     }
                 }
             } catch (e: Exception) {
-                Log.d("asmi-error",e.toString())
+                //catch exception
             }
         }
     }

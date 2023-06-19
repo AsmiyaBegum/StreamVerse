@@ -15,7 +15,7 @@ interface StreamVerseAPIInterface {
     @GET("v3/49fec598-1f91-40fc-99c2-9e71470c02ee")
     suspend fun getStreamCategoryList() : List<Category>
 
-    @GET("v3/f85a5834-e8c4-4d3f-bbdb-5e52f626f9cb")
+    @GET("v3/d129ce75-34b2-4c9f-b828-1310e2e1ad73")
     suspend fun getVideoStreamCategory() : List<VideoStreamCategory>
 
     @GET("v3/20414898-c00b-4663-b985-9a74e1e15a5d")

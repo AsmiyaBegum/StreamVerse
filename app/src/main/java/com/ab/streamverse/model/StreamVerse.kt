@@ -9,7 +9,7 @@ data class Category(
 data class StreamDetails (
      var movieName : String = "",
     var thumbnail : String = "",
-    var free : Boolean = false,
+    var free : String = "",
     var movieKey : String = ""
 )
 
