@@ -115,4 +115,4 @@ The application will have three screens to facilitate different functionalities:
   - GSON
   - OkHttp
   - ExoPlayer
-  - 
+
