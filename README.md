@@ -1,5 +1,4 @@
 # StreamVerse
-Stream Verse
 
 **Purpose** : 
 
@@ -9,9 +8,10 @@ The objective of this application is to allow users to easily discover and watch
 
 ![Home-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/home_screen.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Movie-Detail-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/movie_detail_screen.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Video-Player-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/vide_player_screen.gif)
 
-**Tech Stack**
+**Tech Stack ✨**
 
   - Kotlin
+  - Exoplayer
   - Constraint Layout
   - Navigation Component
   - Glide and Blur Glide
@@ -19,7 +19,6 @@ The objective of this application is to allow users to easily discover and watch
   - Retrofit
   - GSON
   - OkHttp
-  - ExoPlayer
 
 **Goals** : 
 
