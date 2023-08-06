@@ -5,6 +5,10 @@ Stream Verse
 
 The objective of this application is to allow users to easily discover and watch a wide range of movies available on the platform. Users can access and view the movies within the application. 
 
+**Application Screenshots** :
+
+![Home-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/home_screen.gif)
+
 **Goals** : 
 
 ● The home screen should prominently showcase the latest trends in movies.
