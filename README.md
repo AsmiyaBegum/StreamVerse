@@ -7,7 +7,7 @@ The objective of this application is to allow users to easily discover and watch
 
 **Application Screenshots** :
 
-![Home-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/home_screen.gif)
+![Home-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/home_screen.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Movie-Detail-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/movie_detail_screen.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Video-Player-Screen](https://github.com/AsmiyaBegum/StreamVerse/blob/master/applicationGIF/vide_player_screen.gif)
 
 **Goals** : 
 
